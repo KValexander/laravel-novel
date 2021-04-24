@@ -1,0 +1,871 @@
+/* Подключение шрифта */
+/*=====================*/
+@font-face {
+	font-family: 'GardensCMRegular';
+	src: url("../fonts/GardensCMRegular.ttf");
+}
+
+/* Общие настройки */
+/*==================*/
+* {
+	padding: 0;
+	margin: 0;
+}
+
+h1 {
+	padding: 0 0 10px 0;
+}
+
+body {
+	font-size: 14pt;
+	font-family: GardensCMRegular;
+}
+
+/* Маска для заднего плана на страницы с background */
+div.background_mask {
+    top: 0;
+    left: 0;
+    opacity: 0.5;
+    position: fixed;
+    z-index: -1;
+    width: 100%;
+    height: 100%;
+    background: url('https://anivisual.net/img/pat1.png');
+}
+
+a {
+	color: black;
+	text-decoration: none;
+}
+
+a:hover {
+	transition: .2s;
+	color: #1d8eea; /*#2a64b1*/
+}
+
+a:not(:hover) {
+	transition: .2s;
+}
+
+/* Всякие настройки для элементов формы*/
+/*======================================*/
+input, select {
+	width: 700px;
+	height: 40px;
+	font-size: 14pt;
+	padding-left: 5px;
+	border: solid 1px #1d8eea;
+	font-family: GardensCMRegular;
+	margin-bottom: 5px;
+}
+select {
+	width: 707px;
+}
+
+select.items {
+	width: 449px;
+}
+input.items {
+	width: 442px;
+	height: 38px;
+}
+input.search[type=text] {
+	width: 69%;
+	margin: 0;
+}
+input.search[type=submit] {
+	width: 29%;
+	height: 42px;
+	margin: 0;
+}
+
+input[type=button], input[type=submit] {
+	width: 250px;
+	border: none;
+	background-color: #1d8eea;
+	color: white;
+	margin-right: 10px;
+ 	cursor: pointer;
+}
+textarea {
+	width: 695px;
+	height: 100px;
+	font-size: 14pt;
+	padding: 5px;
+	border: solid 1px #1d8eea;
+	font-family: GardensCMRegular;
+}
+
+textarea.comment {
+	width: calc(100% - 10px);
+	border: solid 1px rgba(0, 0, 0, 0.3);
+	background-color: rgba(255, 255, 255, 0.5);
+	box-shadow: 0 0 3px rgba(29, 142, 234, 0.5);
+}
+
+/* Для определённых обёрток форм */
+#once {
+	margin-top: 20px;
+	margin-bottom: 0px;
+}
+
+/* Настройки стилей для верхней части сайта */
+/*===========================================*/
+div.top {
+	width: 100%;
+	height: 85px;
+	overflow: hidden;
+	background-color: white;
+	border-bottom: solid 5px #1d8eea;
+	margin-bottom: 30px;
+	box-shadow: 0 0 10px rgba(29, 142, 234, 0.5);
+}
+
+div.bottom {
+	width: 100%;
+	height: 85px;
+	overflow: hidden;
+	background-color: white;
+	border-top: solid 5px #1d8eea;
+	margin-top: 30px;
+	box-shadow: 0 0 10px rgba(29, 142, 234, 0.5);
+}
+
+div.top nav, div.bottom nav {
+	width: 1200px;
+	height: 100%;
+	margin: 0 auto;
+}
+
+div.top div.logo, div.bottom div.logo {
+	padding: 20px 0px 20px 0px;
+	width: 60px;
+	height: 50px;
+	float: left;
+}
+
+div.top div.logo img, div.bottom div.logo img{
+	width: 60px;
+	height: 100%;
+}
+div.top h1, div.bottom h1 {
+	width: 140px;
+	line-height: 90px;
+	color: #2c2c2c;
+	font-size: 60px;
+	padding: 0; margin: 0;
+	cursor: pointer;
+	float: left;
+    -webkit-user-select: none;
+}
+div.top h1:hover, div.bottom h1:hover {
+	transition: .2s;
+	color: #1d8eea; /*#2a64b1*/
+}
+div.top h1:not(:hover), div.bottom h1:not(:hover) {
+	transition: .2s;
+}
+
+div.top nav.menu {
+	line-height: 90px;
+	text-align: right;
+}
+
+div.top nav.menu a {
+	font-size: 14pt;
+	padding: 15px 5px 15px 10px;
+	border-left: solid 2px #1d8eea;
+}
+
+/* Настройки стилей для профиля */
+/*===============================*/
+div.wrap_profile, div.wrap_profile_side, div.wrap_profile_sidebar {
+	width: calc(820px - 42px);
+	padding: 20px;
+	margin: 10px 0 30px 0;
+	border-radius: 5px;
+	overflow: hidden;
+	border: solid 1px rgba(0, 0, 0, 0.3);
+	box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+	background-color: rgba(255, 255, 255, 0.5);
+}
+
+div.content div.wrap_profile h2, div.content div.wrap_profile_side h2 {
+	padding: 0px 0 20px 0;
+}
+
+div.wrap_profile div.avatar, div.wrap_profile_sidebar div.avatar {
+	width: 200px;
+	height: 200px;
+	padding-right: 20px;
+	margin-right: 10px;
+	float: left;
+	border-right: solid 3px #1d8eea;
+}
+
+div.wrap_profile div.avatar img, div.wrap_profile_sidebar div.avatar img {
+	width: 100%;
+	height: 100%;
+	border-radius: 100px;
+	object-fit: cover;
+	box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+	background-color: rgba(255, 255, 255, 0.5);
+}
+
+div.wrap_profile div.profile h3, div.wrap_profile_side h3 {
+	padding-bottom: 10px;
+}
+
+div.wrap_profile div.profile p, div.wrap_profile_side p {
+	padding: 5px 0 5px 0;
+}
+
+div.wrap_profile input {
+	margin-right: 5px;
+	width: 240px;
+}
+
+/* Для сайдбара */
+div.wrap_profile_sidebar {
+	width: 260px;
+	margin: 0 auto;
+	margin-top: 20px;
+	max-height: 300px;
+}
+div.wrap_profile_sidebar p {
+	padding: 10px 0 10px 0;
+}
+
+/* Для остального */
+div.content div.wrap_profile_side h2 {
+	padding-bottom: 10px;
+}
+
+div.wrap_profile_side div.line {
+	padding-top: 0;
+	margin-top: 0;
+}
+div.wrap_profile_side div.container {
+	display: none;
+	position: relative;
+	max-width: 1200px;
+}
+
+div.wrap_profile_side div.profile_novel {
+	margin: 20px 0 20px 0;
+	width: 30%;
+	margin-right: 0.1%;
+	display: inline-table;
+	padding: 10px;
+	min-height: 370px;
+	border-radius: 3px;
+	box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+	background-color: rgba(255, 255, 255, 0.5);
+}
+div.wrap_profile_side div.profile_novel img {
+	width: 100%;
+	height: 300px;
+	object-fit: cover;
+	border-top: solid 3px #1d8eea;
+	border-bottom: solid 3px #1d8eea;
+	box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+	background-color: rgba(255, 255, 255, 0.5);
+}
+
+div.wrap_profile_side div.wrap_comment {
+	padding: 10px 0 10px 10px;
+	margin: 10px 0 10px 0;
+	border: solid 1px rgba(0, 0, 0, 0.3);
+	box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+	border-left: solid 3px #1d8eea;
+}
+
+div.wrap_profile_side h4 {
+	line-height: 30px;
+	font-size: 14pt;
+	float: left;
+	padding-right: 5px;
+	margin-right: 5px;
+	text-transform: uppercase;
+}
+
+/* Настройки стилей для контентной части сайта */
+/*==============================================*/
+div.app {
+	width: 1200px;
+	min-height: calc(100vh - 282px);
+	margin: 0 auto;
+	margin-top: 20px;
+	margin-bottom: 20px;
+	padding: 20px;
+	border-radius: 5px;
+	border: solid 1px rgba(0, 0, 0, 0.3);
+	box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+	background-color: rgba(255, 255, 255, 1);
+}
+
+header {
+	overflow: hidden;
+}
+
+header div.head {
+	width: 800px;
+	float: left;
+}
+header div.session {
+	width: 340px;
+	margin-left: 60px;
+	text-align: right;
+	line-height: 50px;
+	float: left;
+}
+
+/*Контентная часть*/
+div.content {
+	padding-top: 10px;
+	padding-bottom: 20px;
+	min-height: 10px;
+	width: 800px;
+	/*overflow: hidden;*/
+	border-top: solid 3px #1d8eea;
+}
+
+div.content p {
+	padding: 5px 0 5px 0;
+}
+
+div.content h2 {
+	padding: 20px 0 20px 0;
+}
+
+/* Главная страница */
+/*===================*/
+div.list_novel, div.list_developer {
+	padding: 20px 0 20px 0;
+	border-top: solid 1px gray;
+	border-bottom: solid 1px gray;
+}
+/* Обёртка для новелл */
+div.list_novel div.wrap {
+	margin: 20px 0 20px 0;
+	width: 30%;
+	margin-right: 0.1%;
+	display: inline-table;
+	padding: 10px;
+	min-height: 330px;
+	border-radius: 3px;
+	box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+	background-color: rgba(255, 255, 255, 0.5);
+}
+
+/* Сами новеллы */
+div.list_novel div.novel {
+	min-height: 368px;
+	padding-bottom: 20px;
+	text-align: justify;
+}
+
+div.list_novel div.novel h3 {
+	padding-top: 5px;
+}
+
+div.list_novel div.novel img {
+	width: 100%;
+	height: 300px;
+	object-fit: cover;
+	border-top: solid 3px #1d8eea;
+	border-bottom: solid 3px #1d8eea;
+	box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+	background-color: rgba(255, 255, 255, 0.5);
+}
+
+/* Стили для ленты переключения страницы */
+/*=========================================*/
+div.tape {
+	padding: 10px;
+	max-width: 400px;
+	margin: 0 auto;
+	min-height: 10px;
+	box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+	background-color: rgba(255, 255, 255, 0.5);
+}
+div.tape div.unit {
+	width: 30px;
+	height: 30px;
+	text-align: center;
+	margin-left: 5px;
+	line-height: 30px;
+	background-color: #1d8eea;
+	display: inline-table;
+	color: white;
+    -webkit-user-select: none;
+    cursor: pointer;
+}
+div.tape div.unit:hover {
+	transition: .3s;
+	background-color: #ff9a0f;
+}
+div.tape div.unit:not(:hover) {
+	transition: .3s;
+	background-color: #1d8eea;
+}
+
+/* Обёртка для разработчиков */
+/*============================*/
+div.content div.list_developer div.developer {
+	border-top: solid 3px #1d8eea;
+	border-bottom: solid 3px #1d8eea;
+	margin: 20px 0 20px 0;
+	width: 30%;
+	display: inline-table;
+	text-align: center;
+	padding: 10px;
+	min-height: 10px;
+	box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+	background-color: rgba(255, 255, 255, 0.5);
+}
+
+div.content div.list_developer div.developer img {
+	width: 100%;
+	max-height: 180px;
+	object-fit: cover;
+}
+
+div.content div.list_developer div.developer h3 {
+	padding-top: 10px;
+}
+
+
+/* Обёртка для контентной части новеллы */
+/*======================================*/
+div.wrap_content {
+	width: 100%-20px;
+	padding: 20px;
+	margin: 20px 0 10px 0;
+	min-height: 10px;
+	overflow: hidden;
+	border-radius: 5px;
+	border: solid 1px rgba(0, 0, 0, 0.3);
+	box-shadow: 0 0 5px rgba(29, 142, 234, 0.5);
+}
+
+div.wrap_content h3 {
+	padding: 0 0 10px 0;
+}
+
+div.wrap_content h2 {
+	padding: 0 0 10px 0;
+}
+
+div.wrap_content div.wrap h2 {
+}
+
+div.wrap_content div.wrap img {
+	float: left;
+	margin-right: 20px;
+	object-fit: cover;
+	border-top: solid 3px #1d8eea;
+	border-bottom: solid 3px #1d8eea;
+	box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+	background-color: rgba(255, 255, 255, 0.5);
+}
+
+/* Обёртка для персонажей */
+/*=========================*/
+div.wrap_content div.wrap_character {
+	margin: 20px 0 20px 0;
+	width: 24%;
+	margin-right: 0.1%;
+	display: inline-table;
+	padding: 10px;
+	min-height: 100px;
+	border-radius: 3px;
+	box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+	background-color: rgba(255, 255, 255, 0.5);
+}
+
+div.wrap_content div.wrap_character img {
+	width: 100%;
+	height: 224px;
+	object-fit: cover;
+	border-top: solid 3px #1d8eea;
+	border-bottom: solid 3px #1d8eea;
+	box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+	background-color: rgba(255, 255, 255, 0.5);
+}
+
+/* Обёртка для форм */
+/*===================*/
+div.wrap_form {
+	margin: 0 0 20px 0;
+	width: 770px;
+	padding: 15px;
+	min-height: 20px;
+	border-radius: 5px;
+	box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+	background-color: rgba(255, 255, 255, 0.5);
+}
+
+div.wrap_form h2 {
+	padding: 10px 0 20px 0;
+}
+
+/* Сайдбар */
+/*==========*/
+div.sidebar {
+	position: absolute;
+	width: 340px;
+	min-height: 10px;
+	margin-left: 860px;
+	border-top: solid 3px #1d8eea;
+}
+
+div.sidebar h2 {
+	padding: 15px 0 37px 0;
+}
+
+/* Стили для превью сайдбара */
+div.sidebar div.novel_preview, div.sidebar div.character_preview {
+	width: 290px;
+	margin: 0 auto;
+	min-height: 10px;
+	margin-top: 85px;
+	padding: 20px;
+	border-radius: 5px;
+	box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+	background-color: rgba(255, 255, 255, 0.5);
+}
+div.sidebar div.novel_preview {
+	margin-top: 30px;
+}
+div.sidebar div.novel_preview p {
+	padding: 3px 0 3px 0;
+}
+
+div.sidebar div.novel_preview img, div.sidebar div.character_preview img {
+	width: 100%;
+	border-top: solid 3px #1d8eea;
+	border-bottom: solid 3px #1d8eea;
+	box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+	background-color: rgba(255, 255, 255, 0.5);
+}
+
+/* Стили для превью персонажа */
+div.sidebar div.character_preview {
+	width: 250px;
+}
+
+div.sidebar div.character_preview h3 {
+	padding: 10px 0 0 0;
+}
+
+/* Стили для контента сайдбара */
+div.sidebar div.novel_content {
+	margin: 85px 0 20px 0;
+	width: 300px;
+	min-height: 10px;
+	padding: 20px;
+	border-radius: 5px;
+	box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+	background-color: rgba(255, 255, 255, 0.5);
+}
+
+div.sidebar div.novel_content img {
+	width: 100%;
+	border-top: solid 3px #1d8eea;
+	border-bottom: solid 3px #1d8eea;
+	box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+	background-color: rgba(255, 255, 255, 0.5);
+}
+
+div.sidebar div.novel_content p {
+	padding: 5px 0 5px 0;
+}
+
+div.line {
+	margin: 15px 0 10px 0;
+	width: 100%;
+	border: solid 1px #1d8eea;
+}
+
+div.favorites {
+	width: 260px;
+	min-height: 10px;
+	margin: 0 auto;
+	padding: 20px;
+	border-radius: 5px;
+	box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+	background-color: rgba(255, 255, 255, 0.5);
+}
+
+/* Обёртка сообщений */
+/*=====================*/
+div.message {
+	border: solid 1px #1d8eea;
+	margin: 20px 0 0 0;
+	color: #1d8eea;
+	padding: 20px;
+}
+
+/* Обёртка всплывающего окна */
+/*============================*/
+div.alert {
+	display: none;
+	background: white;
+	width:400px;
+	height:200px;
+	position: fixed;
+	padding: 20px;
+	z-index: 100;
+	top:50%;
+	left:50%;
+	margin:-200px 0 0 -200px;
+	border: solid 1px black;
+	text-align: center;
+}
+
+div.alert h3 {
+	padding: 60px 0px 50px 0px;
+}
+
+/* Обёртка для увеличенного изображения */
+/*======================================*/
+div.increase_img {
+	position: fixed;
+	display: none;
+	padding: 5px;
+	min-width: 100px;
+	max-width: 1200px;
+	background: #252b37;
+	min-height: 10px;
+	margin: 0 auto;
+	text-align: center;
+	border-radius: 5px;
+	z-index: 101;
+	/*box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+	background-color: rgba(255, 255, 255, 0.5);*/
+}
+
+div.increase_img_overlay{
+  display: none;
+  background: rgba(0,0,0,.5);
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1;
+}
+div.increase_img img {
+	margin: 0;
+	padding: 0;
+	width: 100%;
+}
+
+div.increase_img div.close {
+	position: absolute;
+	width: 40px;
+	height: 40px;
+	background-color: #1d8eea;
+}
+
+div.increase_img div.close:hover {
+	transition: .4s;
+	background-color: #ff9a0f;
+}
+div.increase_img div.close:not(:hover) {
+	transition: .4s;
+	background-color: #1d8eea;
+}
+
+/* Стили для страницы моделирования */
+/*==========================================*/
+div.moderation {
+	overflow: hidden;
+}
+div.moderation div.novels {
+	float: left;
+	width: 87%;
+	padding: 20px;
+	margin: 10px 1% 10px 0;
+	min-height: 300px;
+	overflow: hidden;
+	border-radius: 5px;
+	border: solid 1px rgba(0, 0, 0, 0.3);
+	box-shadow: 0 0 5px rgba(29, 142, 234, 0.5);
+}
+div.moderation div.novels img {
+	float: left;
+	margin-right: 10px;
+	width: 220px;
+	object-fit: cover;
+	height: 300px;
+	border-top: solid 3px #1d8eea;
+	border-bottom: solid 3px #1d8eea;
+	box-shadow: 0 0 5px rgba(29, 142, 234, 0.5);
+}
+div.moderation div.novels h3 {
+	padding-bottom: 10px;
+}
+div.moderation div.novels p {
+	padding-top: 5px;
+}
+div.moderation div.access {
+	float: left;
+	margin: 10px 0 10px 0;
+ 	width: 6%;
+ 	height: 348px;
+	border-radius: 5px;
+	background-color: #1d8eea;
+ 	cursor: pointer;
+ 	-webkit-writing-mode: vertical-rl;
+ 	writing-mode:tb-rl;
+ 	text-align: center;
+ 	color: white;
+ 	line-height: 44px;
+ 	font-size: 24pt;
+    -webkit-user-select: none;
+}
+div.moderation div.access:hover {
+	box-shadow: 0 0 5px rgba(29, 142, 234, 1);
+}
+div.moderation div.access:active {
+	opacity: 1.2;
+	box-shadow: 0 0 5px rgba(0, 0, 0, 1);
+}
+
+/* Стили для страницы разработчика */
+/*===================================*/
+div.wrap_developer {
+	width: 100%-20px;
+	padding: 20px;
+	margin: 10px 0 10px 0;
+	min-height: 10px;
+	overflow: hidden;
+	border-radius: 5px;
+	border: solid 1px rgba(0, 0, 0, 0.3);
+	box-shadow: 0 0 5px rgba(29, 142, 234, 0.5);
+}
+div.wrap_developer h3 {
+	padding: 0 0 10px 0;
+}
+div.wrap_developer p {
+	padding: 5px 0 5px 0;
+}
+div.wrap_developer_novel div.list_novel div.novel img {
+	height: 285px;
+}
+div.sidebar div.wrap_developer {
+	margin-top: 75px;
+}
+div.sidebar div.wrap_developer img {
+	width: 100%;
+}
+div.wrap_developer_novel {
+	width: 100%-20px;
+	padding: 20px;
+	margin: 10px 0 10px 0;
+	min-height: 10px;
+	overflow: hidden;
+	border-radius: 5px;
+	border: solid 1px rgba(0, 0, 0, 0.3);
+	box-shadow: 0 0 5px rgba(29, 142, 234, 0.5);
+}
+div.wrap_developer_novel h2 {
+	padding: 10px 0 20px 0;
+}
+
+/* Стили для страницы результатов поиска */
+/*========================================*/
+div.wrap_search {
+	width: 1200px;
+	min-height: 10px;
+	margin: 10px 0 10px 0;
+	border-radius: 5px;
+	overflow: hidden;
+}
+
+div.wrap_search h1, div.wrap_search h2, div.wrap_search h3{
+	margin: 0px;
+	padding: 0px;
+	text-align: left;
+	padding-bottom: 10px;
+}
+div.wrap_search h2 {
+	padding-top: 20px;
+	padding-bottom: 0;
+}
+
+div.wrap_search div.search_novel {
+	display: inline-table;
+	width: 46%;
+	padding: 20px;
+	margin: 10px 0 10px 0;
+	overflow: hidden;
+	min-height: 300px;
+	border-radius: 5px;
+	border: solid 1px rgba(0, 0, 0, 0.3);
+	box-shadow: 0 0 5px rgba(29, 142, 234, 0.5);
+}
+div.wrap_search div.search_novel img {
+	float: left;
+	margin-right: 10px;
+	width: 220px;
+	object-fit: cover;
+	height: 320px;
+	border-top: solid 3px #1d8eea;
+	border-bottom: solid 3px #1d8eea;
+	box-shadow: 0 0 5px rgba(29, 142, 234, 0.5);
+}
+
+/* Настройка стилей для комментариев */
+/*=====================================*/
+div.comments {
+	margin: 10px 0 10px 0;
+	padding-right: 5px;
+	overflow: hidden;
+}
+
+div.comments div.wrap_comment, div.comments div.reply_comment {
+	padding: 10px 0 10px 10px;
+	margin: 10px 0 10px 0;
+	border: solid 1px rgba(0, 0, 0, 0.3);
+	box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+	border-left: solid 3px #1d8eea;
+}
+
+div.comments div.wrap_comment h4, div.comments div.reply_comment h4 {
+	line-height: 30px;
+	font-size: 14pt;
+	float: left;
+	padding-right: 5px;
+	margin-right: 5px;
+	text-transform: uppercase;
+}
+
+ span.do {
+	color: #1d8eea;
+    -webkit-user-select: none;
+    cursor: pointer;
+}
+
+ span.do:hover {
+	transition: .3s;
+	color: #ff9a0f; /*#2a64b1*/
+}
+
+span.do:not(:hover) {
+	transition: .3s;
+}
+
+div.comments div.reply_comment {
+	margin-left: 50px;
+}
+
+div.comments textarea.reply {
+	width: 90%;
+	height: 50px;
+	border: solid 1px rgba(0, 0, 0, 0.3);
+	background-color: rgba(255, 255, 255, 0.5);
+	box-shadow: 0 0 3px rgba(29, 142, 234, 0.5);
+}
